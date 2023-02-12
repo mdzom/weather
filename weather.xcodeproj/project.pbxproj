@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		78E223B02997886B008CA3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223AF2997886B008CA3D0 /* AppDelegate.swift */; };
 		78E223B22997886B008CA3D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223B12997886B008CA3D0 /* SceneDelegate.swift */; };
-		78E223B42997886B008CA3D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223B32997886B008CA3D0 /* ViewController.swift */; };
+		78E223B42997886B008CA3D0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223B32997886B008CA3D0 /* StartViewController.swift */; };
 		78E223B92997886C008CA3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E223B82997886C008CA3D0 /* Assets.xcassets */; };
 		78E223BC2997886C008CA3D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E223BA2997886C008CA3D0 /* LaunchScreen.storyboard */; };
+		78E223C72998AF6A008CA3D0 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223C62998AF6A008CA3D0 /* UIViewController+extension.swift */; };
+		78E223CA2998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E223C92998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf */; };
+		78E223CC2998BC38008CA3D0 /* Spektra-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E223CB2998BC38008CA3D0 /* Spektra-CondensedBold.ttf */; };
+		78E223D22998C251008CA3D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223D12998C251008CA3D0 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		78E223AC2997886B008CA3D0 /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E223AF2997886B008CA3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78E223B12997886B008CA3D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78E223B32997886B008CA3D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78E223B32997886B008CA3D0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		78E223B82997886C008CA3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78E223BB2997886C008CA3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78E223BD2997886C008CA3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78E223C62998AF6A008CA3D0 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		78E223C92998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpektraFree-CondensedBoldFree.ttf"; sourceTree = "<group>"; };
+		78E223CB2998BC38008CA3D0 /* Spektra-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spektra-CondensedBold.ttf"; sourceTree = "<group>"; };
+		78E223D12998C251008CA3D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,89 @@
 			isa = PBXGroup;
 			children = (
 				78E223AF2997886B008CA3D0 /* AppDelegate.swift */,
+				78E223C82998BBC5008CA3D0 /* Fonts */,
 				78E223B12997886B008CA3D0 /* SceneDelegate.swift */,
-				78E223B32997886B008CA3D0 /* ViewController.swift */,
+				78E223D32998C279008CA3D0 /* Extensions */,
+				78E223C329989958008CA3D0 /* StartModule */,
+				78E223CF2998C227008CA3D0 /* MainModule */,
 				78E223B82997886C008CA3D0 /* Assets.xcassets */,
 				78E223BA2997886C008CA3D0 /* LaunchScreen.storyboard */,
 				78E223BD2997886C008CA3D0 /* Info.plist */,
 			);
 			path = weather;
+			sourceTree = "<group>";
+		};
+		78E223C329989958008CA3D0 /* StartModule */ = {
+			isa = PBXGroup;
+			children = (
+				78E223CD2998C1A0008CA3D0 /* Model */,
+				78E223C42998996B008CA3D0 /* View */,
+				78E223CE2998C204008CA3D0 /* ViewModel */,
+			);
+			name = StartModule;
+			sourceTree = "<group>";
+		};
+		78E223C42998996B008CA3D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78E223B32997886B008CA3D0 /* StartViewController.swift */,
+				78E223C52998AF49008CA3D0 /* Extensions */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		78E223C52998AF49008CA3D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		78E223C82998BBC5008CA3D0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				78E223CB2998BC38008CA3D0 /* Spektra-CondensedBold.ttf */,
+				78E223C92998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		78E223CD2998C1A0008CA3D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		78E223CE2998C204008CA3D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		78E223CF2998C227008CA3D0 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				78E223D02998C238008CA3D0 /* View */,
+			);
+			name = MainModule;
+			sourceTree = "<group>";
+		};
+		78E223D02998C238008CA3D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78E223D12998C251008CA3D0 /* MainViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		78E223D32998C279008CA3D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78E223C62998AF6A008CA3D0 /* UIViewController+extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +206,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E223CC2998BC38008CA3D0 /* Spektra-CondensedBold.ttf in Resources */,
 				78E223BC2997886C008CA3D0 /* LaunchScreen.storyboard in Resources */,
+				78E223CA2998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf in Resources */,
 				78E223B92997886C008CA3D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,9 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78E223B42997886B008CA3D0 /* ViewController.swift in Sources */,
+				78E223C72998AF6A008CA3D0 /* UIViewController+extension.swift in Sources */,
+				78E223B42997886B008CA3D0 /* StartViewController.swift in Sources */,
 				78E223B02997886B008CA3D0 /* AppDelegate.swift in Sources */,
 				78E223B22997886B008CA3D0 /* SceneDelegate.swift in Sources */,
+				78E223D22998C251008CA3D0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
