@@ -8,6 +8,7 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
     private lazy var nowOnStreetLabel: UILabel = {
         createLabel(text: "сейчас на улице",
                     fontSize: 100)
@@ -41,7 +42,6 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        
         addToView()
         addConstraint()
     }
@@ -94,7 +94,6 @@ class StartViewController: UIViewController {
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: false)
     }
-    
 }
 
 

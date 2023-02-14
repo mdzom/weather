@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78A417F12998E7F30015C3EC /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A417F02998E7F30015C3EC /* MainScrollView.swift */; };
+		78A417F5299B920E0015C3EC /* del.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A417F4299B920E0015C3EC /* del.swift */; };
 		78E223B02997886B008CA3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223AF2997886B008CA3D0 /* AppDelegate.swift */; };
 		78E223B22997886B008CA3D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223B12997886B008CA3D0 /* SceneDelegate.swift */; };
 		78E223B42997886B008CA3D0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223B32997886B008CA3D0 /* StartViewController.swift */; };
@@ -16,9 +18,12 @@
 		78E223CA2998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E223C92998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf */; };
 		78E223CC2998BC38008CA3D0 /* Spektra-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E223CB2998BC38008CA3D0 /* Spektra-CondensedBold.ttf */; };
 		78E223D22998C251008CA3D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223D12998C251008CA3D0 /* MainViewController.swift */; };
+		78E223D52998E445008CA3D0 /* WhiteRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223D42998E445008CA3D0 /* WhiteRoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78A417F02998E7F30015C3EC /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
+		78A417F4299B920E0015C3EC /* del.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = del.swift; sourceTree = "<group>"; };
 		78E223AC2997886B008CA3D0 /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E223AF2997886B008CA3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78E223B12997886B008CA3D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		78E223C92998BC1C008CA3D0 /* SpektraFree-CondensedBoldFree.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpektraFree-CondensedBoldFree.ttf"; sourceTree = "<group>"; };
 		78E223CB2998BC38008CA3D0 /* Spektra-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spektra-CondensedBold.ttf"; sourceTree = "<group>"; };
 		78E223D12998C251008CA3D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		78E223D42998E445008CA3D0 /* WhiteRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				78E223D12998C251008CA3D0 /* MainViewController.swift */,
+				78E223D42998E445008CA3D0 /* WhiteRoundedView.swift */,
+				78A417F02998E7F30015C3EC /* MainScrollView.swift */,
+				78A417F4299B920E0015C3EC /* del.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -221,8 +230,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E223C72998AF6A008CA3D0 /* UIViewController+extension.swift in Sources */,
+				78A417F5299B920E0015C3EC /* del.swift in Sources */,
+				78A417F12998E7F30015C3EC /* MainScrollView.swift in Sources */,
 				78E223B42997886B008CA3D0 /* StartViewController.swift in Sources */,
 				78E223B02997886B008CA3D0 /* AppDelegate.swift in Sources */,
+				78E223D52998E445008CA3D0 /* WhiteRoundedView.swift in Sources */,
 				78E223B22997886B008CA3D0 /* SceneDelegate.swift in Sources */,
 				78E223D22998C251008CA3D0 /* MainViewController.swift in Sources */,
 			);
