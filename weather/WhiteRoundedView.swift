@@ -9,7 +9,8 @@ import UIKit
 
 class WhiteRoundedView: UIView {
     
-    var ellipseHeight: CGFloat = 0
+//    var ellipseHeight: CGFloat = 0
+    private var ellipseHeight: CGFloat
     
     private let degreeOfRoundness: CGFloat = 200
     private lazy var contentView = UIView()
@@ -18,15 +19,36 @@ class WhiteRoundedView: UIView {
         UIScreen.main.bounds.width
     }()
     
-    override init(frame: CGRect) {
+    private lazy var temperatureDuringDayStackView: UIStackView = {
+        //    MARK: изменить на модель
+        let stackView = TemperatureDuringDayStackView(frame: CGRect(), model: [-20, -15, -18, -25])
+        return stackView
+    }()
+    
+    private lazy var detailedInformationStackView: UIStackView = {
+        //    MARK: изменить на модель
+        let stackView = DetailedInformationStackView(frame: CGRect(), model: [3, 70, 762, 10])
+
+        
+        return stackView
+    }()
+    
+    init(frame: CGRect, ellipseHeight: CGFloat) {
+        self.ellipseHeight = ellipseHeight
         super.init(frame: frame)
         self.backgroundColor = .white
         addToView()
+        addToContentView()
         addConstraint()
-        
-        
-        contentView.backgroundColor = .red
     }
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        self.backgroundColor = .white
+//        addToView()
+//        addToContentView()
+//        addConstraint()
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -58,7 +80,6 @@ class WhiteRoundedView: UIView {
                                            startAngle: 0,
                                            endAngle: .pi,
                                            clockwise: true)
-
         path.append(topCurvePath)
         path.append(bottomCurvePath)
         path.close()
@@ -76,6 +97,11 @@ class WhiteRoundedView: UIView {
         addSubview(contentView)
     }
     
+    private func addToContentView() {
+        contentView.addSubview(temperatureDuringDayStackView)
+        contentView.addSubview(detailedInformationStackView)
+    }
+    
     private func addConstraint() {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -83,6 +109,21 @@ class WhiteRoundedView: UIView {
         contentView.widthAnchor.constraint(equalToConstant: width).isActive = true
 //        MARK: поправить высоту!!!!!!
         contentView.heightAnchor.constraint(equalToConstant: 900).isActive = true
+        
+        
+        temperatureDuringDayStackView.translatesAutoresizingMaskIntoConstraints = false
+        temperatureDuringDayStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
+        temperatureDuringDayStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
+        temperatureDuringDayStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        temperatureDuringDayStackView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+//        cityAndMenuStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        
+        
+        detailedInformationStackView.translatesAutoresizingMaskIntoConstraints = false
+        detailedInformationStackView.topAnchor.constraint(equalTo: temperatureDuringDayStackView.bottomAnchor, constant: 16).isActive = true
+        detailedInformationStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
+        detailedInformationStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        detailedInformationStackView.heightAnchor.constraint(equalTo: detailedInformationStackView.widthAnchor).isActive = true
     }
 }
 

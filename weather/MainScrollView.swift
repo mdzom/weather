@@ -11,7 +11,6 @@ class MainScrollView: UIScrollView {
     
     private let viewHeight: CGFloat = 1000
     private lazy var contentView = UIView()
-//    private lazy var whiteRoundedView = WhiteRoundedView()
     
     private lazy var labelWithCity: UILabel = {
         let label = UILabel()
@@ -87,9 +86,6 @@ class MainScrollView: UIScrollView {
         stackView.alignment = .center
         stackView.addArrangedSubview(labelWithCity)
         stackView.addArrangedSubview(menuButton)
-        
-//        stackView.backgroundColor = .red
-        
         return stackView
     }()
     
@@ -100,8 +96,6 @@ class MainScrollView: UIScrollView {
         stackView.alignment = .leading
         stackView.addArrangedSubview(weatherLabel)
         stackView.addArrangedSubview(labelWithWind)
-//        stackView.backgroundColor = .blue
-        
         return stackView
     }()
     
@@ -112,16 +106,12 @@ class MainScrollView: UIScrollView {
         stackView.alignment = .center
         stackView.addArrangedSubview(temperatureLabel)
         stackView.addArrangedSubview(weatherConditionsStackView)
-        stackView.backgroundColor = .yellow
-        
         return stackView
     }()
     
     private lazy var whiteRoundedView: UIView = {
-        let view = WhiteRoundedView()
-//        myView.backgroundColor = .orange
-        view.ellipseHeight = viewHeight
-
+        let view = WhiteRoundedView(frame: CGRect(),
+                                    ellipseHeight: viewHeight)
         return view
     }()
 
@@ -173,8 +163,6 @@ class MainScrollView: UIScrollView {
         temperatureAndWeatherConditionsStackView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         temperatureAndWeatherConditionsStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
 
-        
-        
         whiteRoundedView.translatesAutoresizingMaskIntoConstraints = false
         whiteRoundedView.topAnchor.constraint(equalTo: temperatureAndWeatherConditionsStackView.bottomAnchor, constant: 30).isActive = true
         whiteRoundedView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true

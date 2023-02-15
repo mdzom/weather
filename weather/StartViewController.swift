@@ -64,25 +64,31 @@ class StartViewController: UIViewController {
     }
     
     private func addConstraint() {
+        
+        nowOnStreetLabel.translatesAutoresizingMaskIntoConstraints = false
         nowOnStreetLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
         nowOnStreetLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
         nowOnStreetLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         nowOnStreetLabel.heightAnchor.constraint(equalToConstant: 210).isActive = true
         
+        temperatureLabel.translatesAutoresizingMaskIntoConstraints = false
         temperatureLabel.topAnchor.constraint(equalTo: nowOnStreetLabel.bottomAnchor).isActive = true
         temperatureLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
         temperatureLabel.heightAnchor.constraint(equalToConstant: 175).isActive = true
         
+        weatherLabel.translatesAutoresizingMaskIntoConstraints = false
         weatherLabel.topAnchor.constraint(equalTo: temperatureLabel.bottomAnchor).isActive = true
         weatherLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
         weatherLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
         weatherLabel.heightAnchor.constraint(equalToConstant: 170).isActive = true
         
+        labelWithWind.translatesAutoresizingMaskIntoConstraints = false
         labelWithWind.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
         labelWithWind.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
         labelWithWind.topAnchor.constraint(equalTo: weatherLabel.bottomAnchor, constant: -30).isActive = true
         labelWithWind.heightAnchor.constraint(equalToConstant: 45).isActive = true
         
+        labelWithRecommendations.translatesAutoresizingMaskIntoConstraints = false
         labelWithRecommendations.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
         labelWithRecommendations.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
         labelWithRecommendations.topAnchor.constraint(equalTo: labelWithWind.bottomAnchor).isActive = true
