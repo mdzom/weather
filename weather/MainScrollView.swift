@@ -9,7 +9,7 @@ import UIKit
 
 class MainScrollView: UIScrollView {
     
-    private let viewHeight: CGFloat = 1000
+    private let viewHeight: CGFloat = 1500
     private lazy var contentView = UIView()
     
     private lazy var labelWithCity: UILabel = {

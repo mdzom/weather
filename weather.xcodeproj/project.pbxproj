@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7800FE4C299CC59600174814 /* TemperatureDuringDayStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800FE4B299CC59600174814 /* TemperatureDuringDayStackView.swift */; };
 		7800FE4E299CCA7500174814 /* DetailedInformationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800FE4D299CCA7500174814 /* DetailedInformationStackView.swift */; };
+		7800FE50299DFAC800174814 /* WeeklyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800FE4F299DFAC800174814 /* WeeklyForecastView.swift */; };
+		7800FE52299E01B700174814 /* WeeklyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800FE51299E01B700174814 /* WeeklyForecastTableViewCell.swift */; };
+		7800FE55299E023700174814 /* WeeklyForecastView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800FE54299E023700174814 /* WeeklyForecastView+Extension.swift */; };
 		78A417F12998E7F30015C3EC /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A417F02998E7F30015C3EC /* MainScrollView.swift */; };
 		78E223B02997886B008CA3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223AF2997886B008CA3D0 /* AppDelegate.swift */; };
 		78E223B22997886B008CA3D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E223B12997886B008CA3D0 /* SceneDelegate.swift */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		7800FE4B299CC59600174814 /* TemperatureDuringDayStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureDuringDayStackView.swift; sourceTree = "<group>"; };
 		7800FE4D299CCA7500174814 /* DetailedInformationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInformationStackView.swift; sourceTree = "<group>"; };
+		7800FE4F299DFAC800174814 /* WeeklyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyForecastView.swift; sourceTree = "<group>"; };
+		7800FE51299E01B700174814 /* WeeklyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyForecastTableViewCell.swift; sourceTree = "<group>"; };
+		7800FE54299E023700174814 /* WeeklyForecastView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyForecastView+Extension.swift"; sourceTree = "<group>"; };
 		78A417F02998E7F30015C3EC /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
 		78E223AC2997886B008CA3D0 /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E223AF2997886B008CA3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7800FE53299E01D000174814 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7800FE54299E023700174814 /* WeeklyForecastView+Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		78E223A32997886B008CA3D0 = {
 			isa = PBXGroup;
 			children = (
@@ -144,10 +158,13 @@
 			isa = PBXGroup;
 			children = (
 				78E223D12998C251008CA3D0 /* MainViewController.swift */,
-				78E223D42998E445008CA3D0 /* WhiteRoundedView.swift */,
 				78A417F02998E7F30015C3EC /* MainScrollView.swift */,
+				78E223D42998E445008CA3D0 /* WhiteRoundedView.swift */,
 				7800FE4B299CC59600174814 /* TemperatureDuringDayStackView.swift */,
 				7800FE4D299CCA7500174814 /* DetailedInformationStackView.swift */,
+				7800FE4F299DFAC800174814 /* WeeklyForecastView.swift */,
+				7800FE51299E01B700174814 /* WeeklyForecastTableViewCell.swift */,
+				7800FE53299E01D000174814 /* Extension */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -232,10 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7800FE55299E023700174814 /* WeeklyForecastView+Extension.swift in Sources */,
 				78E223C72998AF6A008CA3D0 /* UIViewController+extension.swift in Sources */,
 				78A417F12998E7F30015C3EC /* MainScrollView.swift in Sources */,
 				78E223B42997886B008CA3D0 /* StartViewController.swift in Sources */,
 				78E223B02997886B008CA3D0 /* AppDelegate.swift in Sources */,
+				7800FE52299E01B700174814 /* WeeklyForecastTableViewCell.swift in Sources */,
+				7800FE50299DFAC800174814 /* WeeklyForecastView.swift in Sources */,
 				7800FE4C299CC59600174814 /* TemperatureDuringDayStackView.swift in Sources */,
 				78E223D52998E445008CA3D0 /* WhiteRoundedView.swift in Sources */,
 				78E223B22997886B008CA3D0 /* SceneDelegate.swift in Sources */,

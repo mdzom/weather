@@ -28,9 +28,15 @@ class WhiteRoundedView: UIView {
     private lazy var detailedInformationStackView: UIStackView = {
         //    MARK: изменить на модель
         let stackView = DetailedInformationStackView(frame: CGRect(), model: [3, 70, 762, 10])
-
-        
         return stackView
+    }()
+    
+    private lazy var weeklyForecastView: UIView = {
+        let view =  WeeklyForecastView()
+        
+        
+        
+        return view
     }()
     
     init(frame: CGRect, ellipseHeight: CGFloat) {
@@ -41,14 +47,6 @@ class WhiteRoundedView: UIView {
         addToContentView()
         addConstraint()
     }
-    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        self.backgroundColor = .white
-//        addToView()
-//        addToContentView()
-//        addConstraint()
-//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -100,6 +98,7 @@ class WhiteRoundedView: UIView {
     private func addToContentView() {
         contentView.addSubview(temperatureDuringDayStackView)
         contentView.addSubview(detailedInformationStackView)
+        contentView.addSubview(weeklyForecastView)
     }
     
     private func addConstraint() {
@@ -108,7 +107,7 @@ class WhiteRoundedView: UIView {
         contentView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         contentView.widthAnchor.constraint(equalToConstant: width).isActive = true
 //        MARK: поправить высоту!!!!!!
-        contentView.heightAnchor.constraint(equalToConstant: 900).isActive = true
+        contentView.heightAnchor.constraint(equalToConstant: 1350).isActive = true
         
         
         temperatureDuringDayStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -124,6 +123,15 @@ class WhiteRoundedView: UIView {
         detailedInformationStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         detailedInformationStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
         detailedInformationStackView.heightAnchor.constraint(equalTo: detailedInformationStackView.widthAnchor).isActive = true
+        
+        
+        
+        weeklyForecastView.translatesAutoresizingMaskIntoConstraints = false
+        weeklyForecastView.topAnchor.constraint(equalTo: detailedInformationStackView.bottomAnchor, constant: 30).isActive = true
+        weeklyForecastView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
+        weeklyForecastView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        
+        weeklyForecastView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -30).isActive = true
     }
 }
 
