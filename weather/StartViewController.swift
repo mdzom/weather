@@ -44,6 +44,31 @@ class StartViewController: UIViewController {
         view.backgroundColor = .black
         addToView()
         addConstraint()
+        print("@@@")
+        
+        let net = NetworkService()
+//        net.getCityKey(url: "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=nZIYZ40GPI0oZb723LjB1GGaQVEugOIn&q=khabarovsk") { value in
+//            DispatchQueue.main.async {
+//                print(value)
+//                print("here")
+//            }
+//            
+//        }
+//        net.getCurrentWeather(url: "https://dataservice.accuweather.com/currentconditions/v1/293149?apikey=nZIYZ40GPI0oZb723LjB1GGaQVEugOIn&details=true") { value in
+//            DispatchQueue.main.async {
+//                            print(value)
+//                            print("here")
+//                        }
+//        }
+        
+        net.getWeatherForDay(url: "https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/293149?apikey=nZIYZ40GPI0oZb723LjB1GGaQVEugOIn&metric=true") { value in
+            DispatchQueue.main.async {
+                            print(value)
+                            print("here")
+                        }
+        }
+        
+        
     }
     
     private func addToView() {
